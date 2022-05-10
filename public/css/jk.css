@@ -43,7 +43,8 @@ nav a{
     margin-left: auto;
 }
 .navbar-toggler{
-    background-color: #f00;
+    background-color: #9b9be5;
+    color: #fff;
     border-color: #6e006e;
 }
 .navbar-toggler-icon{
@@ -75,7 +76,7 @@ section{
     padding: 5%;
 }
 #home{
-    background-image: url('/img/bg_home.jpeg');
+    background-image: url('../img/bg_home.jpeg');
     background-size: cover;
     height: 30rem;
 }
@@ -88,10 +89,9 @@ section{
 }
 #about{
     background-color: #6e006e;
-    color: #fff;
 }
 #about-bg{
-    background-image: url('/img/viksta-logo-icon.svg');
+    background-image: url('../img/viksta-logo-icon.svg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: 50%;
@@ -103,7 +103,7 @@ section{
     background-color: #decdde;
 }
 #careers-bg{
-    background-image: url('/img/bg_careers.svg');
+    background-image: url('../img/bg_careers.svg');
     background-position-x: right;
     background-repeat: no-repeat;
 }

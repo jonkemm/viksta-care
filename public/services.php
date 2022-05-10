@@ -2,6 +2,8 @@
 $title = "Our services";
 include('./php/head.php');
 include('./php/nav.php');
+session_start();
+include('./php/functions.php');
 ?>
     <h1><a name="#contact"><?=$title?></a></h1>
             <div class="row flex">
