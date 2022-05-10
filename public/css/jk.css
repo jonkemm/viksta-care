@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Kumbh+Sans:wght@900&display=swap');
+
+body{
+    font-size: 18px;
+}
+h1 a,h2 a,h3 a,  h1,h2,h3, #logo-name, footer, footer a{
+    color: #9b9be5;
+    font-family: 'Bowlby One SC', cursive;
+    font-family: 'Kumbh Sans', sans-serif;
+    /* -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #6e006e; */
+}
+body a{
+    color: #111;
+    text-decoration: none;
+}
+body a:hover{
+    color: #333;
+}
+h1{
+    font-size: 2.5em;
+    margin: 4rem auto 3rem auto;
+}
+h2{
+    font-size: 2em;
+    margin: 3rem auto 2rem auto;
+}
+h3{
+    font-size: 1.5em;
+    margin: 2rem auto 1rem auto;
+}
+/* --------- nav --------- */
+#logo-icon{
+    width: 61px;
+}
+#logo-text{
+    width: 181px;
+}
+nav a{
+    color: #9b9be5 !important;
+}
+.navbar-nav {
+    margin-left: auto;
+}
+.navbar-toggler{
+    background-color: #f00;
+    border-color: #6e006e;
+}
+.navbar-toggler-icon{
+    background-color: #fff;
+    color: #fff !important;
+    border-color: #fff;
+}
+#logo-name{
+    float: right;
+    line-height: 1.5rem;
+    margin: 1rem 0 0 1.5rem;
+    font-size: 3rem;
+}
+#logo-name small{
+    font-size: 1rem;
+    color: #9b9be5;
+    margin-left: 5rem;
+}
+.btn-warning{
+    border-radius: 2rem;
+    font-weight: bold;
+    color: #6e006e !important;
+}
+/* --------- sections --------- */
+address{
+    font-family: inherit;
+}
+section{
+    padding: 5%;
+}
+#home{
+    background-image: url('/img/bg_home.jpeg');
+    background-size: cover;
+    height: 30rem;
+}
+#home h1{
+    margin-top: 8rem;
+}
+#home p{
+    font-size: 3rem;
+    color: #6e006e;
+}
+#about{
+    background-color: #6e006e;
+    color: #fff;
+}
+#about-bg{
+    background-image: url('/img/viksta-logo-icon.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+}
+#assessment{
+    background-color: #dddded;
+}
+#chat{
+    background-color: #decdde;
+}
+#careers-bg{
+    background-image: url('/img/bg_careers.svg');
+    background-position-x: right;
+    background-repeat: no-repeat;
+}
+#contact{
+    background-color: #bcb0bc;
+}
+.tel{
+    color: #fff !important;
+    font-size: 2.5rem;
+    margin-right: 3rem;
+}
+.tel small{
+    font-size: 1.5rem;
+    vertical-align: text-top;
+}
+.nav a{
+    color: #6e006e;
+}
+.nav-item{
+    margin-right: 1rem;
+    color: #000000 !important;
+}
+/* --------- forms --------- */
+.input-group-text{
+    width: 3rem;
+    border-radius: 1rem 0 0 1rem;
+    color: #6e006e;
+}
+.input-group{
+    margin-bottom: 1rem;
+}
+.red{
+    color: #f00;
+    font-weight: bold;
+    width: auto;
+}
+.required:after{
+    content: '*';
+    color: #f00;
+    font-weight: bold;
+    margin-left: 3px;
+}
+input, textarea{
+    border-radius: 0 1rem 1rem 0 !important;
+    border: none;
+    background-color: #fff;
+    padding: 1rem;
+    font-size: 1.5rem;
+    color: #6e006e;
+}
+
+footer ul{
+   display: flex; 
+   list-style: none;
+   margin: 3rem auto;
+   
+}
+footer ul li a{
+    margin-right: 1rem;
+    padding: 1rem;
+    color: #9b9be5;
+}
+.error{
+    color: #f00;
+    font-weight: bold;
+    width: 100%;
+}
