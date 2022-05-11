@@ -1,5 +1,7 @@
 <?php
 $title = "Contact Viksta Care Ltd";
+$description = "Contact Viksta Care Ltd, call VistaCare, or email us";
+$keywords = "Contact, Viksta Care Ltd, call VistaCare, email viksta care";
 include('./php/head.php');
 include('./php/nav.php');
 session_start();
@@ -48,6 +50,7 @@ include('./php/functions.php');
                 <div class="input-group">
                     <p><span class="red"> *</span> All fields required</p>
                 </div>
+                <input type="hidden" value="index" name="purpose">
                 <input class="btn btn-primary form-control" type="submit" value="Send" />
                 <p>We will not share your personal information and aim to get back to your email the same working day</p>
             </form>

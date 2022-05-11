@@ -22,7 +22,7 @@ h1{
     margin: 4rem auto 3rem auto;
 }
 h2{
-    font-size: 2em;
+    font-size: 1.5em;
     margin: 3rem auto 2rem auto;
 }
 h3{
@@ -106,6 +106,13 @@ section{
     background-image: url('../img/bg_careers.svg');
     background-position-x: right;
     background-repeat: no-repeat;
+}
+.details .w-50 ul{
+    border: #9b9be5 solid 2px;
+    background-color: #e6e6f7;
+    margin: 1rem;
+    padding: 2rem auto;
+    border-radius: 1rem;
 }
 #contact{
     background-color: #bcb0bc;

@@ -1,5 +1,7 @@
 <?php
-$title = "Our services";
+$title = "Our services";    
+$description = "Our services";
+$keywords = "Our services";
 include('./php/head.php');
 include('./php/nav.php');
 session_start();

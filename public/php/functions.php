@@ -7,8 +7,8 @@ function formField($field){
         }
     }
 }
-// echo $_SESSION['post']['check'];
 function check(){
+    // echo $_SESSION['post']['check'];
     if(isset($_SESSION['post']['check'])){
     echo('
     <div class="w4rAnimated_checkmark">
@@ -19,5 +19,6 @@ function check(){
         <p>Thank you for your message.</p>
     </div>
     ');
+    unset($_SESSION['post']['check']);
         }
 }

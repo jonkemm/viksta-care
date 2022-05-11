@@ -1,7 +1,11 @@
 <?php
 $title = "Viksta Care Ltd";
+$description = "Viksta Care Ltd, Homecare in Bradford, West Yorkshire, UK";
+$keywords = "Viksta Care Ltd, Homecare, Bradford, West Yorkshire, UK";
 include('./php/head.php');
 include('./php/nav.php');
+session_start();
+include('./php/functions.php');
 ?>
 <section id="home">
     <div class="row">
@@ -18,24 +22,34 @@ include('./php/nav.php');
             <p>Leave us your information and we will advise you without obligation.</p>
         </div>
         <div class="w-50">
-            <form action="">
+            <form action="send" id="contact-form" method="post" enctype="multipart/form-data">
                 <div class="input-group">
                     <div class="input-group-text"><span class="fa fa-user"></span></div>
-                    <input class="form-control" type="text" id="name" placeholder="Full name" />
+                    <input class="form-control" type="text" name="name" id="name" placeholder="Full name" />
+<?php formField('name') ?>
                 </div>
                 <div class="input-group">
                     <div class="input-group-text"><span class="fa fa-envelope"></span></div>
-                    <input class="form-control" type="email" id="email" placeholder="Email" />
+                    <input class="form-control" type="email" name="email" id="email" placeholder="Email" />
+<?php formField('email') ?>
                 </div>
                 <div class="input-group">
                     <div class="input-group-text"><span class="fa fa-phone"></span></div>
-                    <input class="form-control" type="text" id="phone" placeholder="Phone" />
+                    <input class="form-control" type="text" name="tel" id="tel" placeholder="Phone" />
+<?php formField('tel') ?>
                 </div>
                 <div class="input-group">
                     <div class="input-group-text"><span class="fa fa-map-marker"></span></div>
-                    <input class="form-control" type="text" id="postcode" placeholder="Postcode" />
+                    <input class="form-control" type="text" name="postcode" id="postcode" placeholder="Postcode" />
+<?php formField('postcode') ?>
                 </div>
-                <button class="btn btn-primary" type="submit">Submit</button>
+<?php check(); ?>
+                <div class="input-group">
+                    <p><span class="red"> *</span> All fields required</p>
+                </div>
+                <input type="hidden" value="index" name="purpose">
+                <input class="btn btn-primary form-control" type="submit" value="Send" />
+                <p>We will not share your personal information and aim to get back to your email the same working day</p>
             </form>
         </div>
     </div>

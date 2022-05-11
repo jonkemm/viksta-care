@@ -1,5 +1,7 @@
 <?php
-$title = "About us";
+$title = "About Viksta Care Ltd";
+$description = "About Viksta Care Ltd"; 
+$keywords = "About, Viksta Care Ltd";
 include('./php/head.php');
 include('./php/nav.php');
 ?>
