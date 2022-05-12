@@ -72,5 +72,5 @@ session_start();
 $_SESSION['post']['check'] = 'yes';
 // echo $_SESSION['post']['check'];
 // exit;
-header("Location: php/form.php?".$missing);
+header("Location: ".$purpose);
 ?>

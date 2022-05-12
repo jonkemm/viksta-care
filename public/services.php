@@ -63,7 +63,7 @@ include('./php/functions.php');
                             </div>
 <?php formField('message') ?>
 <?php check(); ?>
-                            <button class="btn btn-primary w-100" type="submit">Submit</button>
+                            <button class="btn btn-primary form-control" type="submit">Submit</button>
                             <input type="hidden" value="services" name="purpose">
                             <div class="input-group">
                                 <div class="w-25"><span class="red"> *</span> All fields required</div>
