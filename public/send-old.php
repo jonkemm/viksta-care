@@ -1,5 +1,5 @@
 <?php
-// require_once ('./bobs-house-viksta/vendor/autoload.php');
+require_once ('./bobs-house-viksta/vendor/autoload.php');
 require_once ('./php/deets.php');
 
 // show errors
@@ -49,38 +49,31 @@ else {
 	</head>
 	<body>
 		<div style='width:100%; text-align:center;'><img src='img/viksta-logo-icon.svg' alt='Viksta Care Logo' /></div>
+		<p>Message: " . $message1."</p>
 		<p>Purpose: ". $purpose . "</p>
+		<p>Name: ". $name . "</p>
 		<p>Origin: ". $origin . "</p>
 		<p>Whom is it for?: ". $whom . "</p>
 		<p>Tel: ". $tel . "</p>
 		<p>Postcode: ". $postcode . "</p>
-		<p>Name: ". $name . "</p>
-		<p>Message: ". $message1 . "</p>
 		<p>Email: ". $email . "
 	</body>
 </html>";
-
-         
-$header = "From:".$user." \r\n";
-$header .= "MIME-Version: 1.0\r\n";
-$header .= "Content-type: text/html\r\n";
-$emailFormat = '';
-$attachment = '';
-$emailFromInfo = 'yes';
-// 	// -------------------------------------------------------------------------
-// require_once './bobs-house-viksta/email-settings.php';
-// 	// -------------------------------------------------------------------------
-
-$result = mail($to, $subject, $htmlMessage, $header, '-f'.$user);
-if ($result) { 
-	$missing = "Message sent&alert=success";
-} else {
-	$missing = "There has been an error sending your comments. Please try later.";
-}
+	$emailFormat = '';
+	$attachment = '';
+	$emailFromInfo = 'yes';
+	// -------------------------------------------------------------------------
+require_once '../bobs-house-viksta/email-settings.php';
+	// -------------------------------------------------------------------------
+	if ($result) { 
+		$missing = "Message sent&alert=success";
+	} else {
+		$missing = "There has been an error sending your comments. Please try later.";
+	}
 }
 session_start();
 $_SESSION['post']['check'] = 'yes';
-// echo $result;
+// echo $_SESSION['post']['check'];
 // exit;
 header("Location: ".$purpose);
 ?>

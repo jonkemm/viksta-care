@@ -53,7 +53,7 @@ include('./php/functions.php');
                     <div class="input-group">
                         <p><span class="red"> *</span> All fields required</p>
                     </div>
-                    <input type="hidden" value="index" name="purpose">
+                    <input type="hidden" value="contact" name="purpose">
                     <input class="btn btn-primary form-control" type="submit" value="Send" />
                     <p>We will not share your personal information and aim to get back to your email the same working day</p>
                 </fieldset>
