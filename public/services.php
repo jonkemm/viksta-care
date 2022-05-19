@@ -6,10 +6,11 @@ include('./php/head.php');
 include('./php/nav.php');
 session_start();
 include('./php/functions.php');
+include('./php/deets.php');
 ?>
     <h1><a name="#contact"><?=$title?></a></h1>
             <div class="row flex">
-                <div class="w-50">
+                <div class="col-sm-6">
                     <h2>Prices</h2>
                     <h3>Carers</h3>
                     <p>£20 per hour, per person, currently max 2 carers</p>
@@ -23,7 +24,7 @@ include('./php/functions.php');
                     <h3>Housework</h3>
                     <p>£15 an hour if supplying your own cleaning products, £17 if we supply them. This includes weekly deep cleans (can be more frequently if needed), laundry and general housework</p>
                 </div>
-                <div class="w-50">
+                <div class="col-sm-6">
                     <h2>Make an enquiry</h2>
                     <form action="send" id="contact-form" method="post" enctype="multipart/form-data">
                         <fieldset>
@@ -63,7 +64,11 @@ include('./php/functions.php');
                             </div>
 <?php formField('message') ?>
 <?php check(); ?>
-                            <button class="btn btn-primary w-100" type="submit">Submit</button>
+                            <!-- <button class="btn btn-primary w-100" type="submit">Submit</button> -->
+                            <button class="g-recaptcha btn btn-primary form-control" 
+                                data-sitekey="<?php echo $RECAPTURE_PUBLIC_KEY?>"" 
+                                data-callback='onSubmit' 
+                                data-action='submit'>Submit</button>
                             <input type="hidden" value="services" name="purpose">
                             <div class="input-group">
                                 <div class="w-25"><span class="red"> *</span> All fields required</div>

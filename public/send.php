@@ -24,18 +24,18 @@ if(isset($_POST["tel"])){$tel = $_POST["tel"];}else{$tel='';};
 $subject = 'Contact form on Viksta Care Ltd website';
 // Remove all illegal characters from email
 
-// if ( isset( $_POST['g-recaptcha-response'] ) ) {
-// 	$captcha = $_POST['g-recaptcha-response']; 
-// }
-// if ( $captcha == '' ) { 
-// 	$response=json_decode(file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=6LdzVAcTAAAAALUWnVa-CwkopuSRv1LKTJS3k53k&response=".$captcha."&remoteip=".$_SERVER['REMOTE_ADDR']), true);
-// 	if ( $response['success'] == '' ) {
-// 		$missing .= 'You failed the spam test. ';
-// 	}
-// }
-// if ( $captcha == '' ) { 
-// 	$missing .= "Please check / tick the I'm not a robot box. "; 
-// }
+if ( isset( $_POST['g-recaptcha-response'] ) ) {
+	$captcha = $_POST['g-recaptcha-response']; 
+}
+if ( $captcha == '' ) { 
+	$response=json_decode(file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".$RECAPTURE_SECRECT_KEY."&response=".$captcha."&remoteip=".$_SERVER['REMOTE_ADDR']), true);
+	if ( $response['success'] == '' ) {
+		$missing .= 'You failed the spam test. ';
+	}
+}
+if ( $captcha == '' ) { 
+	$missing .= "Please check / tick the I'm not a robot box. "; 
+}
 
 // check
 if ( $missing != "") {
@@ -48,15 +48,15 @@ else {
 		<title>".$subject."</title>
 	</head>
 	<body>
-		<div style='width:100%; text-align:center;'><img src='img/viksta-logo-icon.svg' alt='Viksta Care Logo' /></div>
-		<p>Purpose: ". $purpose . "</p>
-		<p>Origin: ". $origin . "</p>
-		<p>Whom is it for?: ". $whom . "</p>
+		<div style='width:100%; text-align:center;'><img style='width:2rem' src='https://vikstacare.co.uk/img/viksta-logo-icon.svg' alt='Viksta Care Logo' /></div>
+		<p>Sent from page: ". $purpose . "</p>
+		<p>Where refered from: ". $origin . "</p>
+		<p>Who is it for?: ". $whom . "</p>
 		<p>Tel: ". $tel . "</p>
 		<p>Postcode: ". $postcode . "</p>
 		<p>Name: ". $name . "</p>
 		<p>Message: ". $message1 . "</p>
-		<p>Email: ". $email . "
+		<p>Email: ". $email . "</p>
 	</body>
 </html>";
 

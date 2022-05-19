@@ -6,22 +6,23 @@ include('./php/head.php');
 include('./php/nav.php');
 session_start();
 include('./php/functions.php');
+include('./php/deets.php');
 ?>
 <section id="home">
     <div class="row">
         <h1>
             Caring at home
-            <p>Your loved ones are in good hands with Viksta Care Ltd</p>
         </h1>
+        <p>Your loved ones are in good hands with Viksta Care Ltd</p>
     </div>
 </section>
 <section id="assessment">
     <div class="row">
-        <div class="w-50">
+        <div class="col-sm-6">
             <h2>Free assessment</h2>
             <p>Leave us your information and we will advise you without obligation.</p>
         </div>
-        <div class="w-50">
+        <div class="col-sm-6">
             <form action="send" id="contact-form" method="post" enctype="multipart/form-data">
                 <div class="input-group">
                     <div class="input-group-text"><span class="fa fa-user"></span></div>
@@ -48,7 +49,11 @@ include('./php/functions.php');
                     <p><span class="red"> *</span> All fields required</p>
                 </div>
                 <input type="hidden" value="index" name="purpose">
-                <input class="btn btn-primary form-control" type="submit" value="Send" />
+                <!-- <input class="btn btn-primary form-control" type="submit" value="Send" /> -->
+                <button class="g-recaptcha btn btn-primary form-control" 
+                                data-sitekey="<?php echo $RECAPTURE_PUBLIC_KEY?>"" 
+                                data-callback='onSubmit' 
+                                data-action='submit'>Submit</button>
                 <p>We will not share your personal information and aim to get back to your email the same working day</p>
             </form>
         </div>
