@@ -8,22 +8,85 @@ session_start();
 include('./php/functions.php');
 include('./php/deets.php');
 ?>
-    
-    <h1><a name="#contact"><?=$title?></a></h1>
+
+<script type="application/ld+json">
+         {         
+            "@context": "https://schema.org/",         
+            "@type": "LocalBusiness",         
+            "@id": "#LocalBusiness",         
+            "url": "https://vikstacare.co.uk",          
+            "legalName": "Viksta Care Ltd",
+            "name": "Viksta Care Ltd",
+            "description": "",
+            "logo": "https://vikstacare.co.uk/img/viksta-logo-icon.svg",
+            "telephone": "07871138679",
+            "email": "contact@vikstacare.co.uk",
+            "address": {             
+              "@type": "PostalAddress",             
+              "streetAddress": "19 Sowden Street",            
+              "addressLocality": "Bradford",             
+              "addressRegion": "West Yorkshire",             
+              "addressCountry": "GBR",             
+              "postalCode": "BD73LX"        
+             }
+          } 
+      </script>
+      
+    <ul id="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
+        <li property="itemListElement" typeof="ListItem">
+            <a property="item" typeof="WebPage" href="https://vikstacare.co.uk"><span property="name">Home</span></a>
+            <meta property="position" content="1">
+        </li> > 
+        <li property="itemListElement" typeof="ListItem">
+            <a property="item" typeof="WebPage" href="vikstacare.co.uk/contact/"><span property="name">Contact</span></a>
+            <meta property="position" content="2">
+        </li>
+    </ul>
+    <h1><?=$title?></h1>
     <div class="row">
         <div class="col-sm-6">
-            <p>Vicky Slater, Viksta Care Ltd</p>
-            <p>
-                <a href="tel:07871138679"><i class="fa fa-phone" title="Phone"></i> 07871 138679</a>
-            </p>
-            <p>
-                <a href="https://wa.me/07871138679"><i class="fa fa-whatsapp" title="Whatsapp" target="blank"></i> Whatsapp</a>
-            </p>
+            <h3>Owner</h3>
+            <p>Vicky Slater, owner of Viksta Care Ltd. Company no. 14013182</p>
+            <h3>
+                <i class="fa fa-map-marker" title="Phone"></i>
+                Address
+            </h3>
+            <address>
+                Viksta Care Ltd<br />
+                19 Sowden Street<br />
+                Bradford<br />
+                BD7 3LX
+            </address>
+            <h3>
+                <i class="fa fa-share-square-o" aria-hidden="true"></i>
+                Tel / Social
+            </h3>
+            <ul class="social">
+                <li>
+                    <a href="tel:07871138679"><i class="fa fa-phone" title="Phone" aria-hidden="true"></i> 07871 138679</a>
+                </li>
+                <li>
+                    <a href="https://wa.me/07871138679"><i class="fa fa-whatsapp" title="Whatsapp" aria-hidden="true" target="blank"></i> Whatsapp</a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/vikstacare/" target="_blank">
+                        <i class="fa fa-instagram" title="Instagram" aria-hidden="true"></i>
+                        Instagram
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/Viksta-care-ltd-105372088809240/" target="_blank">
+                        <i class="fa fa-facebook" title="Facebook" aria-hidden="true"></i>
+                        Facebook
+                    </a>
+                </li>
+            </ul>
         </div>
         <div class="col-sm-6">
+            <h2>Message us</h2>
             <form action="send" id="contact-form" method="post" enctype="multipart/form-data">
                 <fieldset>
-                    <legend><h2>Contact us</h2></legend>
+                    <legend>Contact us</legend>
                     <div class="input-group">
                         <div class="input-group-text required"><span class="fa fa-map-marker"></span></div>
                         <select class="form-control" name="origin" required id="origin">

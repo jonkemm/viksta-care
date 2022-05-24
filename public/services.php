@@ -8,7 +8,17 @@ session_start();
 include('./php/functions.php');
 include('./php/deets.php');
 ?>
-    <h1><a name="#contact"><?=$title?></a></h1>
+            <ul id="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
+                <li property="itemListElement" typeof="ListItem">
+                    <a property="item" typeof="WebPage" href="https://vikstacare.co.uk"><span property="name">Home</span></a>
+                    <meta property="position" content="1">
+                </li> > 
+                <li property="itemListElement" typeof="ListItem">
+                    <a property="item" typeof="WebPage" href="vikstacare.co.uk/services/"><span property="name">Services</span></a>
+                    <meta property="position" content="2">
+                </li>
+            </ul>
+            <h1><?=$title?></h1>
             <div class="row flex">
                 <div class="col-sm-6">
                     <h2>Prices</h2>

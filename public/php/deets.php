@@ -8,3 +8,5 @@ $from_name='Viksta Care Ltd Website';
 $to='vikstacare@hotmail.com';
 $RECAPTURE_PUBLIC_KEY = '6LdbivcfAAAAAHK7UXwUs3LDyVzppjiIMif4dKBw';
 $RECAPTURE_SECRECT_KEY = '6LdbivcfAAAAAC9aTTBvLlLxw6basvJgkTET0CMs';
+
+// contact@ Bigbagofballs26

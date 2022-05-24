@@ -28,8 +28,13 @@ h2{
 h3{
     font-size: 1.5em;
     margin: 2rem auto 1rem auto;
+    clear: left;
 }
 /* --------- nav --------- */
+#breadcrumb{
+    position: absolute;
+    left: -1000px;
+}
 .btn{
     background-color: #9b9be5 !important;
     color: #fff !important;
@@ -42,6 +47,7 @@ h3{
 }
 #logo-icon{
     width: 61px;
+    height: 75px;
 }
 #logo-text{
     width: 181px;
@@ -77,6 +83,16 @@ nav a{
 nav button{
     margin-top: -0.5rem;
 }
+.nav{
+    clear: both;
+}
+#cookiemessage, #cookiemessage input{
+    font-size: 1rem;
+}
+#cookiemessage input{
+    float: right;
+    font-size: 0.75rem;
+}
 /* --------- sections --------- */
 address{
     font-family: inherit;
@@ -85,7 +101,7 @@ section{
     padding: 5%;
 }
 #home{
-    background-image: url('../img/bg-home.png');
+    background-image: url('../img/bg-home.webp');
     background-size: cover;
     height: 30rem;
 }
@@ -136,6 +152,18 @@ section{
 #contact{
     background-color: #bcb0bc;
 }
+.social li{
+    float: left;
+    list-style: none; 
+    margin-left: 1rem;
+}
+ul.social{
+    margin-left: 0;
+    padding-left: 0;
+}
+ul.social li:before{
+    content: '';
+}
 .tel{
     color: #fff !important;
     font-size: 1.5rem;
@@ -182,11 +210,17 @@ input, textarea{
     font-size: 1.5rem;
     color: #6e006e;
 }
-
+.error{
+    color: #f00;
+    font-weight: bold;
+    width: 100%;
+}
+/* ----------------- footer --------------------- */
 footer ul{
    display: flex; 
    list-style: none;
    margin: 3rem auto;
+    text-align: center;
    
 }
 footer ul li a{
@@ -194,8 +228,12 @@ footer ul li a{
     padding: 1rem;
     color: #9b9be5;
 }
-.error{
-    color: #f00;
-    font-weight: bold;
-    width: 100%;
+footer i{
+    font-size:3rem !important;
+}
+footer img{
+    width:6rem;
+}
+footer ul li.name{
+    width: 200px;
 }

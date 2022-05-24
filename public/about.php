@@ -5,10 +5,20 @@ $keywords = "About, Viksta Care Ltd";
 include('./php/head.php');
 include('./php/nav.php');
 ?>
-<h1><a name="#about"><?=$title?> </a></h1>
+<ul id="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
+    <li property="itemListElement" typeof="ListItem">
+        <a property="item" typeof="WebPage" href="https://vikstacare.co.uk"><span property="name">Home</span></a>
+        <meta property="position" content="1">
+    </li> > 
+    <li property="itemListElement" typeof="ListItem">
+        <a property="item" typeof="WebPage" href="vikstacare.co.uk/about/"><span property="name">About</span></a>
+        <meta property="position" content="2">
+    </li>
+</ul>
+<h1><?=$title?></h1>
 <div class="row flex">
-    <div class="w-25" id="about-bg"></div>
-    <div class="w-75">
+    <div class="col-sm-3" id="about-bg"></div>
+    <div class="col-sm-9">
         <h2>Our team</h2>
         <p>Vicky Slater is the registered owner and manager with over 20 years’ experience working in health and social care including dementia and palliative care. DBS checked.</p>
         <h2>Viksta care provides the following services:</h2>

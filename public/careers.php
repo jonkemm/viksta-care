@@ -5,7 +5,17 @@ $keywords = "Work with us";
 include('./php/head.php');
 include('./php/nav.php');
 ?>
-<h1><a name="#careers"><?=$title?></a></h1>
+    <ul id="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
+        <li property="itemListElement" typeof="ListItem">
+            <a property="item" typeof="WebPage" href="https://vikstacare.co.uk"><span property="name">Home</span></a>
+            <meta property="position" content="1">
+        </li> > 
+        <li property="itemListElement" typeof="ListItem">
+            <a property="item" typeof="WebPage" href="vikstacare.co.uk/careers/"><span property="name">Careers</span></a>
+            <meta property="position" content="2">
+        </li>
+    </ul>
+    <h1><?=$title?></h1>
     <div class="row flex">
         <div class="col-sm-6">
             <p>At Viksta Care Ltd we provide high standards of care to clients in their own homes, we really feel we stand out from the rest and work hard to provide quality care for our customers. Our care workers are as important as the people that we care for.</p>
