@@ -26,6 +26,19 @@ include('./php/deets.php');
                     <p>Your loved ones are in good hands with Viksta Care Ltd</p>
                 </div>
             </section>
+            <section id="about">
+                <div class="row">
+                    <div class="col-sm-9">
+                        <h2>Who we are</h2>
+                        <p>We are driven by the strong belief that everyone - regardless of age, disability, sickness or vulnerability - should be able to live life on their own terms.</p>
+                        <p>We are committed to building a better care system because we know that finding the right carer really can transform your life.</p>
+                        <p><input type="button" class="btn btn-alert" value="Find out more" onclick="window.location.href='/about'" /></p>
+                    </div>
+                    <div class="col-sm-3">
+                        <img src="img/viksta-logo-icon.svg" alt="About Viksta Care Ltd" />
+                    </div>
+                </div>
+            </section>
             <section id="assessment">
                 <div class="row">
                     <div class="col-sm-6">
@@ -68,10 +81,6 @@ include('./php/deets.php');
                         </form>
                     </div>
                 </div>
-            </section>
-            <section id="recruitment">
-                <h2>Work with us</h2>
-                <p>If you'd like work with us</p>
             </section>
 <?php
 include('./php/footer.php');

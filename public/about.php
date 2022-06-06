@@ -17,10 +17,12 @@ include('./php/nav.php');
 </ul>
 <h1><?=$title?></h1>
 <div class="row flex">
-    <div class="col-sm-3" id="about-bg"></div>
-    <div class="col-sm-9">
+    <div class="col-3">
         <h2>Our team</h2>
+        <img src="./img/vicky-slater-owner-viksta-care-ltd.webp" alt="Vicky Slater" class="img-fluid img-thumbnail" />
         <p>Vicky Slater is the registered owner and manager with over 20 years’ experience working in health and social care including dementia and palliative care. DBS checked.</p>
+    </div>
+    <div class="col-9">
         <h2>Viksta care provides the following services:</h2>
         <ul>
             <li>All personal cares includinng bath/shower, nail care, continence care, etc.</li>

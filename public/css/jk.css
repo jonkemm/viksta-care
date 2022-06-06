@@ -93,7 +93,7 @@ nav button{
     float: right;
     font-size: 0.75rem;
 }
-/* --------- sections --------- */
+/* --------- sections -------------------------------------------------------------- */
 address{
     font-family: inherit;
 }
@@ -119,11 +119,12 @@ section{
 #about{
     background-color: #6e006e;
 }
-#about-bg{
-    background-image: url('../img/viksta-logo-icon.svg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 50%;
+#about p{
+    color: #fff;
+}
+#about img{
+    width: 50%;
+    margin: 25%;
 }
 #assessment{
     background-color: #dddded;
